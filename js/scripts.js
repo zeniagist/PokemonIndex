@@ -1,5 +1,5 @@
 // declare variables
-var favoriteFood = "Shrimp Alfredo Pasta";
+let favoriteFood = "Shrimp Alfredo Pasta";
 
 alert('Hello world');
 
