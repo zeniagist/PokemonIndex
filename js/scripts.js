@@ -5,7 +5,14 @@ let pokemonList = [
   { name: 'Snorlax', height: 2.1, types: ['Monster'] }
 ];
 
-// print name and height
 for (let i = 0; i < pokemonList.length; i++) {
-  document.write(pokemonList[i].name + " (height: "+ pokemonList[i].height + ")<br>");
+  // print name and height
+  document.write(
+    pokemonList[i].name + " (height: " + pokemonList[i].height + ")"
+  );
+  // print message if height is past threshold
+  if(pokemonList[i].height >= 1){
+    document.write(" - Wow, that's big!");
+  }
+  document.write("<br>");
 }
