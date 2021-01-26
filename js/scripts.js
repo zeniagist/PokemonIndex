@@ -4,4 +4,8 @@ let pokemonList = [
   { name: 'Eevee', height: 0.3, types: ['Field'] },
   { name: 'Snorlax', height: 2.1, types: ['Monster'] }
 ];
-console.log(pokemonList);
+
+// print name and height
+for (let i = 0; i < pokemonList.length; i++) {
+  document.write(pokemonList[i].name + " (height: "+ pokemonList[i].height + ")<br>");
+}
