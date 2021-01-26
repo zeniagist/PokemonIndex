@@ -1,6 +1,6 @@
 // declare variables
-let favoriteFood = "Shrimp Alfredo Pasta";
-
-alert('Hello world');
-
-document.write(favoriteFood);
+let pokemonList = [
+  { name: 'Jigglypuff', height: 0.5, types: ['Fairy'] },
+  { name: 'Eevee', height: 0.3, types: ['Field'] },
+  { name: 'Snorlax', height: 2.1, types: ['Monster'] }
+];
