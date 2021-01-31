@@ -1,7 +1,48 @@
-html, body{
-  font-family: 'Fraunces', serif;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
-  color: lightcoral;
+/*
+*
+* =====================
+* GENERAL
+* =====================
+*
+*/
+:root{
+  --font-family: 'Fraunces', serif;
+  --primary-color: #A3BCB6;
+  --secondary-color: #39603D;
+  --tertiary-color: #3C403D;  
+  --quaternary-color: #DADED4;
+  --font-size: 16px;
+  --text-align: center;
 }
+html, body{
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: 1.6;
+  color: var(--primary-color);
+  text-align: var(--text-align);
+}
+/* BUTTONS */
+.button-class {
+  padding: 16px 32px;
+  text-align: var(--text-align);
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--font-size);
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: var(--secondary-color);
+  background-color: var(--quaternary-color);
+  border: 2px solid var(--tertiary-color);
+  font-family: var(--font-family);  
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+.button-class:active, .button-class:hover {
+  color: var(--quaternary-color);
+  background-color: var(--tertiary-color);
+  border: 2px solid var(--tertiary-color);
+  font-family: var(--font-family);
+}
+/* LIST */
+.pokemon-list li{ list-style: none; }
