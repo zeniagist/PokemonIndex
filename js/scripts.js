@@ -1,32 +1,42 @@
 let pokemonRepository = (function (){
   // declare variables
-  let pokemonList = [
+  let repository = [
     { name: 'Jigglypuff', height: 0.5, types: ['Fairy'] },
     { name: 'Eevee', height: 0.3, types: ['Field'] },
     { name: 'Snorlax', height: 2.1, types: ['Monster'] }
-  ];   
+  ];
+  // Add pokemon to array
+  function add(pokemon) { repository.push(pokemon); }  
+  // add styling for pokemon list
+  function addListItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listpokemon = document.createElement("li");
+    let button = document.createElement("button");
+    // change button to pokemon name
+    button.innerText = pokemon.name;
+    // add class to pokemon button
+    button.classList.add("button-class");
+    // show details of pokemon name
+    button.addEventListener('click', function showDetails() {
+      console.log(pokemon.name);
+    });
+    listpokemon.appendChild(button);
+    pokemonList.appendChild(listpokemon);
+  }
+  // return pokemon list
+  function getAll() { return repository; }
+  // return functions
+  return {
+    add: add,
+    getAll: getAll,
+    addListItem: addListItem
+  };  
 
-  return{
-    // add pokemon to array
-    add: function(pokemon) {
-      pokemonList.push(pokemon);
-    },
-    // returns pokemon list
-    getAll: function() {
-      pokemonList.forEach(function(pokemon){
-        // print name and height
-        document.write(pokemon.name + " (height: " + pokemon.height + ")");
-        // print message if height is past threshold
-        if(pokemon.height >= 1){
-          document.write(" - Wow, that's big!");
-        }
-        document.write("<br>");
-      });
-    }
-  }  
 }());
 
-// add pokemon
+// add pokemon to pokemon list
 pokemonRepository.add({ name: 'Pikachu', height: 0.4, types: ['Field', 'Fairy'] });
-// print list
-pokemonRepository.getAll();
+// populate pokemon list
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
