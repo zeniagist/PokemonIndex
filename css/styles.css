@@ -19,7 +19,7 @@ html, body{
   font-size: var(--font-size);
   line-height: 1.6;
   color: var(--primary-color);
-  text-align: var(--text-align);
+  /* text-align: var(--text-align); */
 }
 /* BUTTONS */
 .button-class {
