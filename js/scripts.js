@@ -2,6 +2,7 @@ let pokemonRepository = (function (){
   // declare variables
   let repository = [];
   let pokemonUrl = 'https://pokeapi.co/api/v2/pokemon/';
+  let modalContainer = document.querySelector("#modal-container");
 
   // Add pokemon to array
   function add(pokemon) { repository.push(pokemon); }    
@@ -14,9 +15,7 @@ let pokemonRepository = (function (){
     let pokemonList = document.querySelector(".pokemon-list");
     let listpokemon = document.createElement("li");
     let button = document.createElement("button");
-    // change button to pokemon name
     button.innerText = pokemon.name;
-    // add class to pokemon button
     button.classList.add("pokemon-btn");
     // show details of pokemon name
     button.addEventListener('click', function() {
@@ -26,6 +25,13 @@ let pokemonRepository = (function (){
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
   }
+  
+  // show details
+    function showDetails(pokemon) {
+        loadDetails(pokemon).then(function () {
+          console.log(pokemon);          
+        });
+    }
 
   // load pokemon list
   function loadList() {
@@ -53,18 +59,18 @@ let pokemonRepository = (function (){
       // Now we add the details to the item
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
-      item.types = details.types;
+      item.types = [];
+      details.types.forEach(function (pokemonType) {
+          item.types.push(pokemonType.type.name);
+      });
+      item.abilities = [];
+      details.abilities.forEach(function (pokemonAbility) {
+      item.abilities.push(pokemonAbility.ability.name);
+      });
     }).catch(function (e) {
       console.error(e);
     });
   }
-
-  // show details
-  function showDetails(pokemon) {
-      loadDetails(pokemon).then(function () {
-        console.log(pokemon);
-      });
-    }
 
   // return functions
   return {
@@ -73,7 +79,7 @@ let pokemonRepository = (function (){
     addListItem: addListItem,
     loadList: loadList,
     loadDetails: loadDetails,
-    showDetails: showDetails
+    showDetails: showDetails,
   };  
 }());
 

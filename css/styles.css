@@ -23,12 +23,18 @@ html, body{
   color: var(--primary-color);
 }
 
-/* CONTAINER */
+/*
+*
+* =====================
+* CONTAINER
+* =====================
+*
+*/
 .pokemon-container {
   padding-bottom: 80px;
-  background-color: var(--quaternary-color);
+  /* background-color: var(--quaternary-color); */
   margin: 20px auto;
-  max-width: 940px;
+  max-width: 1200px;
 }
 
 .pokemon-container:before,
@@ -37,7 +43,13 @@ html, body{
   display: table;
 }
 
-/* HEADER */
+/*
+*
+* =====================
+* HEADER
+* =====================
+*
+*/
 .section-title {
   color: var(--primary-color);
   font-size: 2.5em;
@@ -57,7 +69,13 @@ html, body{
   background-color: var(--tertiary-color);
 }
 
-/* LIST */
+/*
+*
+* =====================
+* LIST
+* =====================
+*
+*/
 .pokemon-list{ 
   list-style: none; 
   display: flex;
@@ -67,7 +85,13 @@ html, body{
   align-items: flex-end;
 }
 
-/* BUTTONS */
+/*
+*
+* =====================
+* BUTTONS
+* =====================
+*
+*/
 .pokemon-btn, .pokemon-btn:target {
   overflow: hidden;
   font-family: var(--font-family); 
@@ -96,3 +120,11 @@ html, body{
   background-color: var(--secondary-color);
   border: 2px solid var(--secondary-color);
 }
+
+/*
+*
+* =====================
+* MODAL
+* =====================
+*
+*/
