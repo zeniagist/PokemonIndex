@@ -20,15 +20,21 @@ html, body{
   font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: var(--line-height);
-  color: var(--primary-color);
+  color: var(--primary-color);  
 }
 
-/* CONTAINER */
+/*
+*
+* =====================
+* CONTAINER
+* =====================
+*
+*/
 .pokemon-container {
   padding-bottom: 80px;
-  background-color: var(--quaternary-color);
+  /* background-color: var(--quaternary-color); */
   margin: 20px auto;
-  max-width: 940px;
+  max-width: 1200px;
 }
 
 .pokemon-container:before,
@@ -37,7 +43,13 @@ html, body{
   display: table;
 }
 
-/* HEADER */
+/*
+*
+* =====================
+* HEADER
+* =====================
+*
+*/
 .section-title {
   color: var(--primary-color);
   font-size: 2.5em;
@@ -57,7 +69,13 @@ html, body{
   background-color: var(--tertiary-color);
 }
 
-/* LIST */
+/*
+*
+* =====================
+* LIST
+* =====================
+*
+*/
 .pokemon-list{ 
   list-style: none; 
   display: flex;
@@ -67,7 +85,13 @@ html, body{
   align-items: flex-end;
 }
 
-/* BUTTONS */
+/*
+*
+* =====================
+* BUTTONS
+* =====================
+*
+*/
 .pokemon-btn, .pokemon-btn:target {
   overflow: hidden;
   font-family: var(--font-family); 
@@ -95,4 +119,76 @@ html, body{
   color: var(--tertiary-color);
   background-color: var(--secondary-color);
   border: 2px solid var(--secondary-color);
+}
+
+/*
+*
+* =====================
+* MODAL
+* =====================
+*
+*/
+#modal-container {
+  display: none;
+}
+
+#modal-container.modalShow {
+  display: block;
+  position: fixed;
+  padding: 1.1em;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  overflow: auto;
+  text-align: center;
+}
+
+.modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: var(--tertiary-color);  
+  padding: 0.9em;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  border-radius: 10px;  
+  color: var(--quaternary-color);
+}
+
+.modal-close {
+  float: right;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal h1 {
+  margin-top: 0.8em;
+  text-transform: uppercase;
+}
+
+.modal div {
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-transform: capitalize;  
+}
+
+.modal-img {
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: auto;
 }
