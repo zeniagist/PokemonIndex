@@ -11,7 +11,7 @@
   --secondary-color: #a15dc0;
   --tertiary-color: #23b9b6;  
   --quaternary-color: #f7f7f7;
-  --font-size: 16px;
+  --font-size: 15px;
   --text-align: center;
   --line-height: 20px;
 }
@@ -21,6 +21,70 @@ html, body{
   font-size: var(--font-size);
   line-height: var(--line-height);
   color: var(--primary-color);  
+}
+
+/*
+*
+* =====================
+* NAVBAR
+* =====================
+*
+*/
+.navbar-img-container{ background-color: var(--quaternary-color); }
+
+.navbar-img{ 
+  height: 8em; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .navbar-nav{
+  color: var(--primary-color);
+  font-size: 1.5em;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-right: 1.5em;
+} */
+
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(119, 119, 119, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 21px;
+    background-color: rgba(247, 247, 247, 1);
+    border-width: 1px;
+    border-radius: 4px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(35, 185, 182, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(161, 93, 192, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(247, 94, 144, 1);
+    background-color: rgba(231, 231, 231, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #f7f7f7;
 }
 
 /*
@@ -92,7 +156,7 @@ html, body{
 * =====================
 *
 */
-.pokemon-btn, .pokemon-btn:target {
+.btn, .btn:target {
   overflow: hidden;
   font-family: var(--font-family); 
   width: 200px;
@@ -113,7 +177,7 @@ html, body{
   outline: none;
 }
 
-.pokemon-btn:active, .pokemon-btn:hover {
+.btn:active, .btn:hover {
   box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
   transform: translate(0px, -3px);
   color: var(--tertiary-color);
@@ -147,7 +211,7 @@ html, body{
   text-align: center;
 }
 
-.modal {
+.modal-content {
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
@@ -173,12 +237,12 @@ html, body{
   cursor: pointer;
 }
 
-.modal h1 {
+.modal-content h1 {
   margin-top: 0.8em;
   text-transform: uppercase;
 }
 
-.modal div {
+.modal-content div {
   text-align: center;
   line-height: 1.5em;
   font-size: 1.5em;
