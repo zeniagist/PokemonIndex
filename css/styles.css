@@ -14,6 +14,7 @@
   --font-size: 15px;
   --text-align: center;
   --line-height: 20px;
+  --letter-spacing: 1.5px;
 }
 
 html, body{
@@ -21,6 +22,7 @@ html, body{
   font-size: var(--font-size);
   line-height: var(--line-height);
   color: var(--primary-color);  
+  letter-spacing: var(--letter-spacing);
 }
 
 /*
@@ -39,37 +41,48 @@ html, body{
   margin-right: auto;
 }
 
-/* .navbar-nav{
-  color: var(--primary-color);
-  font-size: 1.5em;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-right: 1.5em;
-} */
-
-#custom-bootstrap-menu.navbar-default .navbar-brand {
-    color: rgba(119, 119, 119, 1);
+.navbar-underline {
+  display: block;
+  width: 400px;
+  height: 2px;
+  margin-top: -10px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--secondary-color);
 }
+
+.navbar-nav{
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nav-divider{
+ margin-left: 10px;
+ margin-right: 5px;
+ width: 1px;
+ height:100%;
+ border-left:1px solid gray;
+}
+
 #custom-bootstrap-menu.navbar-default {
-    font-size: 21px;
     background-color: rgba(247, 247, 247, 1);
     border-width: 1px;
     border-radius: 4px;
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
-    color: rgba(35, 185, 182, 1);
+    color: var(--tertiary-color);
     background-color: rgba(248, 248, 248, 0);
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
-    color: rgba(161, 93, 192, 1);
+    color: var(--secondary-color);
     background-color: rgba(248, 248, 248, 0);
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
-    color: rgba(247, 94, 144, 1);
+    color: var(--primary-color);
     background-color: rgba(231, 231, 231, 1);
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
@@ -84,7 +97,7 @@ html, body{
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #f7f7f7;
+    background-color:var(--quaternary-color);
 }
 
 /*
@@ -95,9 +108,8 @@ html, body{
 *
 */
 .pokemon-container {
-  padding-bottom: 80px;
-  /* background-color: var(--quaternary-color); */
-  margin: 20px auto;
+  padding-bottom: 5em;
+  margin: 1.33em auto;
   max-width: 1200px;
 }
 
@@ -119,7 +131,6 @@ html, body{
   font-size: 2.5em;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
@@ -173,7 +184,6 @@ html, body{
   background-color: var(--quaternary-color);
   border: 2px solid var(--quaternary-color);
   font-weight: 500;
-  letter-spacing: 1.5px;
   outline: none;
 }
 
