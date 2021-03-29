@@ -13,7 +13,7 @@ The API used for this project is the [Pokémon API](https://pokeapi.co/).
 
 Allows users to see a list of select Pokemon from JSON list.
 
-##Future Features
+### Future Features
 - Contact Form Validation
 - About section
 
