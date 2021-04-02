@@ -2,7 +2,7 @@
 
 ## Project Showcase
 
-![App Showcase Img](/pokedex-img.jpg)
+![App Showcase Img](/pokemonindex.jpg)
 
 ## Project Overview
 
